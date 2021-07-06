@@ -11,13 +11,20 @@ async function getRawData(username){
 }
 
 
-async function getRank(username){
-    let res = "";
-    await getRawData("absolute4").then(function(data) { 
-        res = data.rank;
+async function getData(username){
+    let res = [];
+    await getRawData(username).then(function(data) { 
+        for(let value in data) {
+            res.push([value, data[value]])
+        }
     });
+
     return res;
 };
 
 
-getRank("absolute4").then(function(data){console.log(data)});
+getData('absolute4').then(function(res) {
+    for(let i = 0; i < res.length; i++) {
+        console.log(`${res[i][0]}: ${res[i][1]}`)
+    }
+})
