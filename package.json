@@ -1,0 +1,25 @@
+{
+  "name": "roxbot-api",
+  "version": "1.0.0",
+  "description": "simple way to get stats from roxbot in nodejs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-absolute/roxbot-wrapper-js.git"
+  },
+  "keywords": [
+    "roxbot"
+  ],
+  "author": "github.com/a-absolute, github.com/adamb201627",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-absolute/roxbot-wrapper-js/issues"
+  },
+  "homepage": "https://github.com/a-absolute/roxbot-wrapper-js#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
