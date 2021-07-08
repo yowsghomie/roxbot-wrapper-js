@@ -10,7 +10,6 @@ async function getRawData(username){
     return rawData;
 }
 
-
 async function getRank(username){
     let res = "";
     await getRawData(username).then(function(data) { 
@@ -110,15 +109,4 @@ async function getTimePlayed(username){
     return res;
 };
 
-
-getRank("absolute4").then(function(data){console.log(`Rank: ${data}`)});
-getPoints("absolute4").then(function(data){console.log(`Points: ${data}`)});
-getKills("absolute4").then(function(data){console.log(`Kills: ${data}`)});
-getDeaths("absolute4").then(function(data){console.log(`Deaths: ${data}`)});
-getRatio("absolute4").then(function(data){console.log(`Ratio: ${data}`)});
-getDamageTaken("absolute4").then(function(data){console.log(`Damage Taken: ${data}`)});
-getDamageDealt("absolute4").then(function(data){console.log(`Damage Dealt: ${data}`)});
-getBestStreak("absolute4").then(function(data){console.log(`Best Streak: ${data}`)});
-getBestMulti("absolute4").then(function(data){console.log(`Best Multi: ${data}`)});
-getBowAccuracy("absolute4").then(function(data){console.log(`Bow Accuracy: ${data}`)});
-getTimePlayed("absolute4").then(function(data){console.log(`Time Played: ${data}`)});
+module.exports = { getRank, getPoints, getKills, getDeaths, getRatio, getDamageTaken, getDamageDealt, getBestStreak, getBestMulti, getBowAccuracy, getTimePlayed };
